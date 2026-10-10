@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Quiz App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Halaman Utama / Start Screen -->
+        <div id="start-screen" class="screen active">
+            <h1>🧠 Interactive Quiz App</h1>
+            <p>Uji pengetahuanmu dengan menjawab minimal 5 pertanyaan pilihan ganda!</p>
+            <div class="high-score-box">
+                High Score: <span id="high-score">0</span>
+            </div>
+            <button id="start-btn" class="btn">Mulai Kuis</button>
+        </div>
+
+        <!-- Halaman Kuis (SPA Pattern) -->
+        <div id="quiz-screen" class="screen">
+            <div class="quiz-header">
+                <span id="question-counter">Pertanyaan 1 dari 5</span>
+                <span id="timer">Waktu: 15s</span>
+            </div>
+            <div class="progress-bar-container">
+                <div id="progress-bar"></div>
+            </div>
+            <div class="question-container">
+                <h2 id="question-text">Pertanyaan akan muncul di sini</h2>
+            </div>
+            <!-- Menggunakan Event Delegation pada container pilihan jawaban -->
+            <div id="choices-container" class="choices-container"></div>
+        </div>
+
+        <!-- Halaman Hasil / Result Screen -->
+        <div id="result-screen" class="screen">
+            <h2>🎉 Kuis Selesai!</h2>
+            <p>Skor Akhir Kamu:</p>
+            <div id="final-score" class="final-score">0</div>
+            <p id="result-message"></p>
+            <button id="restart-btn" class="btn">Main Lagi</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
